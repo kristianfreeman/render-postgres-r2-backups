@@ -12,17 +12,17 @@ services:
         fromDatabase:
           name: replace-with-your-postgres-instance-name
           property: connectionString
-      # pick the region closest to your database
-      # For example, us-west-2 for the Oregon region
-      - key: AWS_REGION
+      # Cloudflare R2 endpoint URL
+      - key: R2_ENDPOINT
         sync: false 
       # A globally unique name for your bucket
       # For example, <your-username>-<database name>-render-postgres-backups
-      - key: S3_BUCKET_NAME
+      - key: R2_BUCKET_NAME
         sync: false
-      # Looks like "AKIAXXXXXXXXXXXXXXXX"
+      # Your Cloudflare R2 Access Key ID
       - key: AWS_ACCESS_KEY_ID
         sync: false
+      # Your Cloudflare R2 Secret Access Key
       - key: AWS_SECRET_ACCESS_KEY
         sync: false
       # Postgres version of your Postgres instance 
