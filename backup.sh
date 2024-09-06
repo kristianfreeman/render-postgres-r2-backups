@@ -2,8 +2,6 @@
 
 set -o errexit -o nounset -o pipefail
 
-export R2_ENDPOINT="https://<accountid>.r2.cloudflarestorage.com"
-
 r2() {
     aws s3 --endpoint-url "$R2_ENDPOINT" "$@"
 }
